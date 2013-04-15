@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Hearno::Application.config.secret_token = 'c5c793ff75eb228bac830ad81781c0d60ceed29696da9255fc0ac74310b43113e76959552cc47151ce1e242fcdba76038d2d208062338a97d504f7bbbfab0b38'
+Hearno::Application.config.secret_token = '921a69b2fbc2a85772bf092a4c67f0fd90f2aae1142c7ca036873b897d403d2d35974ac8dfc999ad16b1ef69fb352cfd7f7635179f261d0a8e23871e5d94649d'
