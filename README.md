@@ -8,6 +8,10 @@ https://github.com/RailsApps/rails_apps_composer
 provided by the RailsApps Project:
 http://railsapps.github.com/
 
+__CI Build Status__
+
+[![Build Status](https://secure.travis-ci.org/danmayer/hearno.png)](http://travis-ci.org/danmayer/hearno)
+
 ________________________
 
 Recipes:
