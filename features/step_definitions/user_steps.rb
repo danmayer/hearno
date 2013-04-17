@@ -139,12 +139,11 @@ Then /^I should be signed in$/ do
   page.should_not have_content "Login"
 end
 
-# Disabled until the gem update with the fix comes out
-# Then /^I should be signed out$/ do
-#   page.should have_content "Sign up"
-#   page.should have_content "Login"
-#   page.should_not have_content "Logout"
-# end
+Then /^I should be signed out$/ do
+  page.should have_content "Sign up"
+  page.should have_content "Login"
+  page.should_not have_content "Logout"
+end
 
 Then /^I see an unconfirmed account message$/ do
   page.should have_content "You have to confirm your account before continuing."
