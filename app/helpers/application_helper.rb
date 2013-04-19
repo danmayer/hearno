@@ -12,4 +12,12 @@ module ApplicationHelper
     html.html_safe
   end
 
+  def avatar_image_url(user)
+    if user.avatar.present?
+      user.avatar.url(:thumb)
+    else
+      GravatarImageTag.gravatar_url(user.email, filetype: :png, rating: 'pg', secure: true)
+    end
+  end
+
 end
