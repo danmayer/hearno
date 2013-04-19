@@ -13,6 +13,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'paperclip'
+gem 'aws-sdk'
 gem 'jquery-rails'
 gem 'gravatar_image_tag'
 gem "thin", ">= 1.5.0"
