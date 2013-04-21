@@ -2,7 +2,7 @@
 <% @users.each do |user| %>
   <p>
     User: <%=link_to user.name, user %><br/>
-    gravatar: <%= gravatar_image_tag(user.email, alt: user.name, filetype: :png, rating: 'pg', secure: true) %>
+    gravatar: <%= gravatar_image_tag(user.email, alt: user.name, gravatar: {filetype: :png, rating: 'R', secure: true}) %>
     &nbsp;  &nbsp;  &nbsp;
     uploaded:
     <% if user.avatar.present? %>

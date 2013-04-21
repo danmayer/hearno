@@ -16,7 +16,7 @@ module ApplicationHelper
     if user.avatar.present?
       user.avatar.url(:thumb)
     else
-      GravatarImageTag.gravatar_url(user.email, filetype: :png, rating: 'pg', secure: true)
+      GravatarImageTag.gravatar_url(user.email, filetype: :png, rating: 'R', secure: true)
     end
   end
 
