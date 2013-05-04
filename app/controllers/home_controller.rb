@@ -4,9 +4,11 @@ class HomeController < ApplicationController
   def index
     @users = User.all
   end
-
+  
   def beta
+    authorize! :beta, @user, :message => 'Not authorized as an administrator.'
     @title = "Special Beta access for admins"
+    @users = User.all
   end
-
+  
 end

@@ -1,15 +1,30 @@
 Hearno
 ========================
 
-A app for friends
+A app for friends, to build something fun while learning a bit more about programming.
+________________________
+
 
 __CI Build Status__
 
 [![Build Status](https://secure.travis-ci.org/danmayer/hearno.png)](http://travis-ci.org/danmayer/hearno)
 
-## TODOS
+
+### TODOS
 
 * one this issue is fixed bump the db cleaner gem version https://github.com/bmabey/database_cleaner/pull/191
+
+###IRB Tips
+________________________
+
+
+    #add admin role to a user in IRB console
+    User.first.update_attributes({"role_ids"=>"1"}, :as => :admin)
+    
+###Random Tips
+________________________
+
+* [Various Heroku commands for Rails3 apps](https://devcenter.heroku.com/articles/rails3#console)
 
 
 ###Acknologments
@@ -28,11 +43,11 @@ Preferences:
 
 ________________________
 
-License
+####License
 
 MIT
 
-Copyright (c) 2013 Dan Mayer
+Copyright (c) 2013 Dan Mayer, Julio Jimenez, Aaron McKay
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

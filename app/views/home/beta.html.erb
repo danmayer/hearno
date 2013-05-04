@@ -1,3 +1,20 @@
 <h1><%= @title %></h1>
-<p>This is a beta version of the app we are building.</p>
+<p>This is a beta version of the app we are building.
+ (only available to us admins)</p>
 
+<% @users.each do |user| %>
+  <p>
+    User: <%=link_to user.name, user %><br/>
+    gravatar: <%= gravatar_image_tag(user.email, alt: user.name, gravatar: {filetype: :png, rating: 'R', secure: true}) %>
+    &nbsp;  &nbsp;  &nbsp;
+    uploaded:
+    <% if user.avatar.present? %>
+      <%= image_tag user.avatar.url(:thumb) %>    
+    <% else %>
+      user hasn't uploaded
+    <% end %>
+    &nbsp;  &nbsp;  &nbsp;
+    account image helper: 
+    <%= image_tag avatar_image_url(user), :alt => user.name %>
+  </p>
+<% end %>
