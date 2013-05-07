@@ -5,6 +5,7 @@ ruby '1.9.3'
 gem 'rails', '3.2.13'
 
 gem "sqlite3", :group => [:development, :test]
+gem "therubyracer", :group => [:development, :test], :require => 'v8'
 gem 'pg', :group => [:production]
 
 group :assets do

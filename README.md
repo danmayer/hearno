@@ -14,18 +14,31 @@ __CI Build Status__
 
 * one this issue is fixed bump the db cleaner gem version https://github.com/bmabey/database_cleaner/pull/191
 
-###IRB Tips
+### IRB Tips
 ________________________
 
 
     #add admin role to a user in IRB console
     User.first.update_attributes({"role_ids"=>"1"}, :as => :admin)
     
-###Random Tips
+### Random Tips
 ________________________
 
 * [Various Heroku commands for Rails3 apps](https://devcenter.heroku.com/articles/rails3#console)
 
+### Vagrant
+
+To help simplify the development setup you can run on a preconfigured vagrant box. First grab the latest free [virtual box](https://www.virtualbox.org/) client for your OS. Then follow the commands below.
+
+    cd ~/projects/hearno
+    vagrant box add hearno https://www.dropbox.com/s/2nm494bm0prfhxr/hearno.box
+    vagrant up
+    vagrant ssh
+    sudo apt-get update #stay up to date on the latest on vagrant
+    cd /vagrant #this should put you into the rails app project directory
+    bundle exec rails s 
+    #Listening on 0.0.0.0:3000, but go to 4000 where vagrant is forwarding
+    open http://localhost:4000
 
 ###Acknologments
 ________________________
