@@ -40,7 +40,7 @@ To help simplify the development setup you can run on a preconfigured vagrant bo
     #Listening on 0.0.0.0:3000, but go to 4000 where vagrant is forwarding
     open http://localhost:4000
 
-###Acknologments
+### Acknowledgments
 ________________________
 
 This application was generated with the rails_apps_composer gem:
