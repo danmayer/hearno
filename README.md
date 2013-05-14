@@ -1,16 +1,17 @@
 Hearno
 ========================
 
-A app for friends, to build something fun while learning a bit more about programming.
+Hearno is an app for friends, to build something fun while learning a bit more about programming. Also, possibly to drive some donations to some of our favorite charities.
 ________________________
 
 
-__CI Build Status__
+__Current CI Build Status__
 
 [![Build Status](https://secure.travis-ci.org/danmayer/hearno.png)](http://travis-ci.org/danmayer/hearno)
 
-### Setup
+### Local Application Setup
 
+* `ruby -v` #does it say ruby 1.9.3, if not need to install that first
 * `git clone this_repo_url`
 * `gem install bundler`
 * `bundle install --without production`
@@ -18,10 +19,9 @@ __CI Build Status__
 * `bundle exec rake db:create` #build the DB
 * `bundle exec rake db:migrate`
 * `bundle exec rake` #do the tests work?
-* `bundle exec rails s`
+* `bundle exec rails server` #starts the server now visit http://localhost:3000
 
-
-# Basic git commands to push changes
+### Basic git commands to push changes
 
 * `git status` #shows current progress
 * `git add .` #add all new files in project directory
@@ -32,17 +32,20 @@ __CI Build Status__
 
 * one this issue is fixed bump the db cleaner gem version https://github.com/bmabey/database_cleaner/pull/191
 
-### IRB Tips
+### Random Tips
+________________________
+
+* [Various Heroku commands for Rails3 apps](https://devcenter.heroku.com/articles/rails3#console)
+* To start the rails console (IRB) run `bundle exec rails console`
+
+
+### IRB / console Tips
 ________________________
 
 
     #add admin role to a user in IRB console
     User.first.update_attributes({"role_ids"=>"1"}, :as => :admin)
     
-### Random Tips
-________________________
-
-* [Various Heroku commands for Rails3 apps](https://devcenter.heroku.com/articles/rails3#console)
 
 ### Vagrant
 
@@ -74,7 +77,7 @@ Preferences:
 
 ________________________
 
-####License
+#### License
 
 MIT
 
