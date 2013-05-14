@@ -9,6 +9,24 @@ __CI Build Status__
 
 [![Build Status](https://secure.travis-ci.org/danmayer/hearno.png)](http://travis-ci.org/danmayer/hearno)
 
+### Setup
+
+* `git clone this_repo_url`
+* `gem install bundler`
+* `bundle install --without production`
+* `bundle exec rake -T` #what tasks do you have
+* `bundle exec rake db:create` #build the DB
+* `bundle exec rake db:migrate`
+* `bundle exec rake` #do the tests work?
+* `bundle exec rails s`
+
+
+# Basic git commands to push changes
+
+* `git status` #shows current progress
+* `git add .` #add all new files in project directory
+* `git commit -a -m "commit message"` #adds your work to be uploaded
+* `git push origin master` #uploads your work to remote code repository
 
 ### TODOS
 
