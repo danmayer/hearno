@@ -4,6 +4,7 @@ Hearno::Application.routes.draw do
   end
   root :to => "home#index"
   match 'beta' => 'home#beta'
+  match 'about' => 'home#about'
 
   devise_for :users
   resources :users
