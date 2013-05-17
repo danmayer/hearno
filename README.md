@@ -5,9 +5,19 @@ Hearno is an app for friends, to build something fun while learning a bit more a
 ________________________
 
 
-__Current CI Build Status__
+### Current CI Build Status
 
 [![Build Status](https://secure.travis-ci.org/danmayer/hearno.png)](http://travis-ci.org/danmayer/hearno)
+
+### Getting setup with your own github fork
+
+* visit [hearno repo](https://github.com/danmayer/hearno)
+* click 'fork' button in top right
+* on your new repo url, which should reload for you
+* copy the ssh url of your repo
+* `git clone git@github.com:YOURREPO/hearno.git`
+* `cd hearno`
+* Follow the local applications setup instructions
 
 ### Local Application Setup
 
@@ -27,6 +37,26 @@ __Current CI Build Status__
 * `git add .` #add all new files in project directory
 * `git commit -a -m "commit message"` #adds your work to be uploaded
 * `git push origin master` #uploads your work to remote code repository
+
+### Setting up SSH for git
+
+* you want public / private key ssh key
+* `cd ~/.ssh`
+* `ssh-keygen -t rsa -C "your_email@example.com"` #example for OSX
+* upload to github so you don't have to type user / password every time you interact with the git repo
+* Follow the [github ssh key instructions](https://help.github.com/articles/generating-ssh-keys)
+
+### Creating your own heroku staging server
+
+* make sure you are in the hear no directory
+* `heroku apps:create 'hearno-YOURNAME-staging'`
+* edit your `./git/config` to add or move the heroku repo it should have something like the below
+
+
+        [remote "heroku"]
+          url = git@heroku.com:hearno-YOURNAME-staging.git
+          fetch = +refs/heads/*:refs/remotes/heroku/*
+
 
 ### TODOS
 
@@ -77,7 +107,7 @@ Preferences:
 
 ________________________
 
-#### License
+### License
 
 MIT
 
