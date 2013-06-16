@@ -9,6 +9,7 @@ class HomeController < ApplicationController
     authorize! :beta, @user, :message => 'Not authorized as an administrator.'
     @title = "Special Beta access for admins"
     @users = User.all
+    @campaigns = Campaign.all
   end
   
   def about

@@ -18,3 +18,14 @@
     <%= image_tag avatar_image_url(user), :alt => user.name %>
   </p>
 <% end %>
+
+<h3>Number of campaigns <%= @campaigns.length %></h3>
+
+<% @campaigns.each do |campaign| %>
+	
+	<p>
+		<%= campaign.title %>
+		
+	</p>
+	
+<% end %>
