@@ -36,9 +36,9 @@ ________________________
 
 ### Updating and Running the app
 
-##### Do this the very first time
+##### If you don't have a upstream in your .git/config run the command below once
 
-* git remote add upstream git@github.com:danmayer/hearno.git
+* `git remote add upstream git@github.com:danmayer/hearno.git`
 
 ##### After that, every time
 
@@ -90,7 +90,7 @@ ________________________
 
 * [Various Heroku commands for Rails3 apps](https://devcenter.heroku.com/articles/rails3#console)
 * To start the rails console (IRB) run `bundle exec rails console`
-
+* To see various rails commands run `bundle exec rails`
 
 ### IRB / console Tips
 ________________________
@@ -98,6 +98,8 @@ ________________________
 
     #add admin role to a user in IRB console
     User.first.update_attributes({"role_ids"=>"1"}, :as => :admin)
+    #or
+    User.where(:email =>'youremail@gmail.com').update_attributes({"role_ids"=>"1"}, :as => :admin)
     
 
 ### Vagrant

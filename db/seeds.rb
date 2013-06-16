@@ -17,6 +17,6 @@ user = User.find_or_create_by_email :name => ENV['ADMIN_NAME'].dup, :email => EN
 puts 'user: ' << user.name
 user.add_role :admin
 
-unless Campaign.first(:conditions => "title = 'Hear no evil, See no evil, Speak no evil'")
+unless Campaign.where(:title => 'Hear no evil, See no evil, Speak no evil')
   campaign = Campaign.create(:title => "Hear no evil, See no evil, Speak no evil", :description => "don't hide stuff", :published => true) 
 end
