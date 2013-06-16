@@ -28,10 +28,26 @@ ________________________
 * `bundle exec rake -T` #what tasks do you have
 * `bundle exec rake db:create` #build the DB
 * `bundle exec rake db:migrate`
+* __look at config/application.example.yml__
 * `open config/application.yml` #add your information and the hearno email that is at mayerdan.com and private 'secret' keys here
 * `rake db:seed` #this will populate your admin / test user
 * `bundle exec rake` #do the tests work?
 * `bundle exec rails server` #starts the server now visit http://localhost:3000
+
+### Updating and Running the app
+
+##### Do this the very first time
+
+* git remote add upstream git@github.com:danmayer/hearno.git
+
+##### After that, every time
+
+* git fetch upstream
+* git reset --hard upstream/master
+* (if there are migrations) `bundle exec rake db:migrate`
+* (if there are db seeds updated) `bundle exec rake db:seed`
+* Restart your server: `bundle exec rails server`
+
 
 ### Basic git commands to push changes
 
@@ -39,6 +55,11 @@ ________________________
 * `git add .` #add all new files in project directory
 * `git commit -a -m "commit message"` #adds your work to be uploaded
 * `git push origin master` #uploads your work to remote code repository
+
+### Sharing code changes with the group
+
+* After pushing to you origin master you can submit a PR request.
+* If I have set you up with upstream commit access you can `git push upstream/master`
 
 ### Setting up SSH for git
 
