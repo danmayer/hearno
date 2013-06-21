@@ -1,0 +1,31 @@
+<h1>Listing Campaign Strips</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Creator</th>
+    <th>Parent</th>
+    <th>Campaign</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @campaign_strips.each do |campaign_strip| %>
+  <tr>
+    <td><%= campaign_strip.title %></td>
+    <td><%= campaign_strip.description %></td>
+    <td><%= campaign_strip.creator.name %></td>
+    <td><%= campaign_strip.parent.try(:title) %></td>
+    <td><%= campaign_strip.campaign.title %></td>
+    <td><%= link_to 'Show', campaign_strip %></td>
+    <td><%= link_to 'Edit', edit_campaign_strip_path(campaign_strip) %></td>
+    <td><%= link_to 'Destroy', campaign_strip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Campaign strip', new_campaign_strip_path %>

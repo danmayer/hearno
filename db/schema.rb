@@ -11,7 +11,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130616161818) do
+ActiveRecord::Schema.define(:version => 20130621010741) do
+
+  create_table "campaign_elements", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+  end
+
+  create_table "campaign_strips", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "creator_id"
+    t.integer  "parent_id"
+    t.integer  "campaign_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "campaign_strips", ["campaign_id"], :name => "index_campaign_strips_on_campaign_id"
+  add_index "campaign_strips", ["creator_id"], :name => "index_campaign_strips_on_creator_id"
+  add_index "campaign_strips", ["parent_id"], :name => "index_campaign_strips_on_parent_id"
 
   create_table "campaigns", :force => true do |t|
     t.string   "title"

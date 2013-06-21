@@ -1,4 +1,7 @@
 Hearno::Application.routes.draw do
+  resources :campaign_strips
+
+
   authenticated :user do
     root :to => 'home#index'
   end

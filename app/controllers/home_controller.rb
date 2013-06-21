@@ -10,6 +10,7 @@ class HomeController < ApplicationController
     @title = "Special Beta access for admins"
     @users = User.all
     @campaigns = Campaign.all
+    @campaign_elements = CampaignElement.all
   end
   
   def about

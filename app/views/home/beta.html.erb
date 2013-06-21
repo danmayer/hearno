@@ -2,6 +2,9 @@
 <p>This is a beta version of the app we are building.
  (only available to us admins)</p>
 
+ <a href="/campaign_strips">Campaign Strip List</a>
+
+
 <% @users.each do |user| %>
   <p>
     User: <%=link_to user.name, user %><br/>
@@ -25,6 +28,18 @@
 	
 	<p>
 		<%= campaign.title %>
+		
+	</p>
+	
+<% end %>
+
+
+<h3>Number of campaign elements <%= @campaign_elements.length %></h3>
+
+<% @campaign_elements.each do |campaign_element| %>
+	
+	<p>
+		<%= campaign_element.title %>
 		
 	</p>
 	

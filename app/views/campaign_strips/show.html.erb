@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @campaign_strip.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @campaign_strip.description %>
+</p>
+
+<p>
+  <b>Creator:</b>
+  <%= @campaign_strip.creator.name %>
+</p>
+
+<p>
+  <b>Parent:</b>
+  <%= @campaign_strip.parent.try(:title) %>
+</p>
+
+<p>
+  <b>Campaign:</b>
+  <%= @campaign_strip.campaign.title %>
+</p>
+
+
+<%= link_to 'Edit', edit_campaign_strip_path(@campaign_strip) %> |
+<%= link_to 'Back', campaign_strips_path %>
