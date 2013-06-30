@@ -24,7 +24,8 @@ describe CampaignStripsController do
   # CampaignStrip. As you add validations to CampaignStrip, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    { "title" => "MyString" }
+    @user ||= FactoryGirl.create(:user)
+    { "title" => "MyString", 'creator_id' => @user.id, 'campaign_id' => @campaign.id }
   end
 
   # This should return the minimal set of values that should be in the session
@@ -32,6 +33,11 @@ describe CampaignStripsController do
   # CampaignStripsController. Be sure to keep this updated too.
   def valid_session
     {}
+  end
+
+  before(:each) do
+    #one campaign is required to create campaign strips
+    @campaign = FactoryGirl.create(:campaign)
   end
 
   describe "GET index" do
