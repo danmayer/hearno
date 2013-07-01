@@ -34,6 +34,14 @@ ________________________
 * `bundle exec rake` #do the tests work?
 * `bundle exec rails server` #starts the server now visit http://localhost:3000
 
+##### Environment Variables you need
+
+    #check in config/application.example.yml
+    HEARNO_GMAIL_USERNAME
+    HEARNO_GMAIL_PASSWORD
+
+
+
 ### Updating and Running the app
 
 ##### If you don't have a upstream in your .git/config run the command below once
