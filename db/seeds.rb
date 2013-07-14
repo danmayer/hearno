@@ -18,10 +18,11 @@ puts 'user: ' << user.name
 user.add_role :admin
 
 if Campaign.where(:title => 'Hear no evil, See no evil, Speak no evil').empty?
-  campaign = Campaign.create(:title => "Hear no evil, See no evil, Speak no evil", :description => "don't hide stuff", :published => true) 
+  campaign = Campaign.create(:title => "Hear no evil, See no evil, Speak no evil", :description => "don't hide stuff", :published => true)
+  puts "created campaign #{campaign.title}"
 end
 
 if CampaignElement.where(:title => 'Test Element').empty?
   campaign_element = CampaignElement.create(:title => "Test Element", :description => "Test the fucking Description") 
-  puts campaign_element.title
+  puts "created element #{campaign_element.title}"
 end
