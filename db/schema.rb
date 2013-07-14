@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130621010741) do
+ActiveRecord::Schema.define(:version => 20130714234819) do
 
   create_table "campaign_elements", :force => true do |t|
     t.string   "title"
@@ -22,7 +22,10 @@ ActiveRecord::Schema.define(:version => 20130621010741) do
     t.datetime "picture_updated_at"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+    t.integer  "campaign_strip_id"
   end
+
+  add_index "campaign_elements", ["campaign_strip_id"], :name => "index_campaign_elements_on_campaign_strip_id"
 
   create_table "campaign_strips", :force => true do |t|
     t.string   "title"
