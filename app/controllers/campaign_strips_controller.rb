@@ -1,4 +1,6 @@
 class CampaignStripsController < ApplicationController
+  before_filter :authenticate_user!, :except => [:index, :show]
+
   # GET /campaign_strips
   # GET /campaign_strips.json
   def index
