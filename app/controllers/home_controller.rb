@@ -15,7 +15,7 @@ class HomeController < ApplicationController
   
   def about
     @title = "about Hearno"
-    @creator = ['Aaron McKay','Dan Mayer','Julio Jimenezz']
+    @creator = ['Aaron McKay','Dan Mayer','Julio Jimenez','Dan Webb']
   end
   
 end
