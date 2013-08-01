@@ -1,5 +1,5 @@
 .pb-wrapper {
-	position: fixed;
+	position: relative;
 	background: #fff url(../images/paper.jpg) repeat center bottom;
 	width: 170px;
 	margin-top: 10px;

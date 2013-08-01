@@ -1,30 +1,18 @@
+<section id="main" class="main">
 <p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
-  <%= @campaign_strip.title %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @campaign_strip.description %>
-</p>
-
-<p>
-  <b>Creator:</b>
-  <%= @campaign_strip.creator.name %>
-</p>
-
-<p>
-  <b>Parent:</b>
-  <%= @campaign_strip.parent.try(:title) %>
-</p>
-
-<p>
-  <b>Campaign:</b>
-  <%= @campaign_strip.campaign.title %>
-</p>
-
+  <h3><%= @campaign_strip.title %></h3>
+<div class="pb-wrapper pb-wrapper-3">
+  <div class="pb-scroll">
+    <ul class="pb-strip">
+      <li><a href="assets/large/1.jpg" rel="lightbox[album1]" title="Spring"><%= image_tag('Hearno_logoicon.png', :alt => "Hearno Logo") %></a></li>
+      <li><a href="assets/large/2.jpg" rel="lightbox[album1]" title="Sunshine"><%= image_tag('Hearno_logoicon.png', :alt => "Hearno Logo") %></a></li>
+      <li><a href="assets/large/3.jpg" rel="lightbox[album1]" title="Summer"><%= image_tag('Hearno_logoicon.png', :alt => "Hearno Logo") %></a></li>
+    </ul>
+  </div>
+  <h3 class="pb-title"><%= @campaign_strip.description %></h3>
+  <h5 class="pb-title"><%= @campaign_strip.creator.name %></h5>
+</div>
 
 <%= link_to 'Edit', edit_campaign_strip_path(@campaign_strip) %> |
 <%= link_to 'Back', campaign_strips_path %>
+</section>
