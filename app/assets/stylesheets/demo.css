@@ -11,16 +11,16 @@ body{
 	font-size: 15px;
 	color: #333;
 	-webkit-font-smoothing: antialiased;
-	overflow: hidden;
+	/*overflow: hidden; this breaks scrolling*/
 }
 a{
 	color: #555;
 	text-decoration: none;
 }
-.container{
+/*.container{
 	width: 100%;
 	position: relative;
-}
+}*/
 .clr{
 	clear: both;
 	padding: 0;

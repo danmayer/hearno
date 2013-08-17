@@ -26,7 +26,7 @@ class CampaignStripsController < ApplicationController
   # GET /campaign_strips/new
   # GET /campaign_strips/new.json
   def new
-    @campaign_strip = CampaignStrip.new
+    @campaign_strip = CampaignStrip.default_strip
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,8 +42,8 @@ class CampaignStripsController < ApplicationController
   # POST /campaign_strips
   # POST /campaign_strips.json
   def create
-    
-    campaign_strip_with_defaults = params[:campaign_strip].merge(:campaign_id => Campaign.first.id)
+    default_values = {:campaign_id => Campaign.first.id, :creator_id => current_user.id}
+    campaign_strip_with_defaults = params[:campaign_strip].merge(default_values)
     
     @campaign_strip = CampaignStrip.new(campaign_strip_with_defaults)
 
