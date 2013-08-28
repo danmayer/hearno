@@ -1,6 +1,7 @@
 class CampaignStripsController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show]
-
+  # before_filter :verifiy_admin_or_owner!, :except => [:index, :show, :new, :create]
+  
   # GET /campaign_strips
   # GET /campaign_strips.json
   def index
@@ -37,6 +38,7 @@ class CampaignStripsController < ApplicationController
   # GET /campaign_strips/1/edit
   def edit
     @campaign_strip = CampaignStrip.find(params[:id])
+    verifiy_admin_or_owner!(@campaign_strip)
   end
 
   # POST /campaign_strips
@@ -62,7 +64,8 @@ class CampaignStripsController < ApplicationController
   # PUT /campaign_strips/1.json
   def update
     @campaign_strip = CampaignStrip.find(params[:id])
-
+    verifiy_admin_or_owner!(@campaign_strip)
+    
     respond_to do |format|
       if @campaign_strip.update_attributes(params[:campaign_strip])
         format.html { redirect_to @campaign_strip, notice: 'Campaign strip was successfully updated.' }
@@ -78,8 +81,9 @@ class CampaignStripsController < ApplicationController
   # DELETE /campaign_strips/1.json
   def destroy
     @campaign_strip = CampaignStrip.find(params[:id])
+    verifiy_admin_or_owner!(@campaign_strip)
     @campaign_strip.destroy
-
+    
     respond_to do |format|
       format.html { redirect_to campaign_strips_url }
       format.json { head :no_content }

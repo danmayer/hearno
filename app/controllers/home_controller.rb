@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :about]
 
   def index
-    @users = User.all
+    @campaign_strip = CampaignStrip.find(:first, :offset => rand(CampaignStrip.count))
   end
   
   def beta

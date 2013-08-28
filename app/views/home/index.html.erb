@@ -1,18 +1,3 @@
 <h3>Home / About</h3>
-Coming Soon
-<% @users.each do |user| %>
-  <p>
-    User: <%=link_to user.name, user %><br/>
-    gravatar: <%= gravatar_image_tag(user.email, alt: user.name, gravatar: {filetype: :png, rating: 'R', secure: true}) %>
-    &nbsp;  &nbsp;  &nbsp;
-    uploaded:
-    <% if user.avatar.present? %>
-      <%= image_tag user.avatar.url(:thumb) %>    
-    <% else %>
-      user hasn't uploaded
-    <% end %>
-    &nbsp;  &nbsp;  &nbsp;
-    account image helper: 
-    <%= image_tag avatar_image_url(user), :alt => user.name %>
-  </p>
-<% end %>
+
+<%= render("campaign_strips/show") %>

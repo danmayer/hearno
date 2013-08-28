@@ -19,5 +19,23 @@ class CampaignStrip < ActiveRecord::Base
     campaign_strip.campaign_elements = elements
     campaign_strip
   end
-
+  
+  def image_or_default(image_position = 0)
+    campaign_elements[image_position].try(:picture)  || ActionController::Base.helpers.image_path('Hearno_logoicon.png')
+  end
+  
+  def title_or_default(title_position = 0)
+    default_title = case title_position 
+      when 0 
+        "Hear No"
+      when 1
+        "See No"
+      when 2
+        "Speak No"
+    end
+    campaign_elements[title_position].try(:title)  || default_title
+  end
+  
+  
+  
 end
