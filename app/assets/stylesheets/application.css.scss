@@ -18,8 +18,6 @@ a.brand {
   }
 }
 
-
-
 .content {
   background-color: #eee;
   padding: 20px;
@@ -30,6 +28,14 @@ a.brand {
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
   box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+.lb-outerContainer {
+    max-width: 720px; 
+    max-height: 720px;
+}
+.lb-dataContainer {
+    max-width: 220px; /* For the text below image */
 }
 
 footer {

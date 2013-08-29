@@ -20,8 +20,8 @@ class CampaignStrip < ActiveRecord::Base
     campaign_strip
   end
   
-  def image_or_default(image_position = 0)
-    campaign_elements[image_position].try(:picture)  || ActionController::Base.helpers.image_path('Hearno_logoicon.png')
+  def image_or_default(image_position = 0, image_size = :thumb)
+    campaign_elements[image_position].try(:picture).try(:url, image_size)  || ActionController::Base.helpers.image_path('Hearno_logoicon.png')
   end
   
   def title_or_default(title_position = 0)

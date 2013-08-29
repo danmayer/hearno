@@ -4,9 +4,9 @@
 <div class="pb-wrapper pb-wrapper-3">
   <div class="pb-scroll">
     <ul class="pb-strip">
-      <li><a href="<%= image_path('large/1.jpg') %>" rel="lightbox[album1]" title="<%= @campaign_strip.title_or_default %>"><%= image_tag( @campaign_strip.image_or_default, :alt => "Hearno Logo") %></a></li>
-      <li><a href="<%= image_path('large/2.jpg') %>" rel="lightbox[album1]" title="<%= @campaign_strip.title_or_default(1) %>"><%= image_tag( @campaign_strip.image_or_default(1), :alt => "Hearno Logo") %></a></li>
-      <li><a href="<%= image_path('large/3.jpg') %>" rel="lightbox[album1]" title="<%= @campaign_strip.title_or_default(2) %>"><%= image_tag( @campaign_strip.image_or_default(2), :alt => "Hearno Logo") %></a></li>
+      <li><a href="<%= image_path(@campaign_strip.image_or_default(0, :original)) %>" data-lightbox="album-1" title="<%= @campaign_strip.title_or_default %>"><%= image_tag( @campaign_strip.image_or_default, :alt => "Hearno Logo") %></a></li>
+      <li><a href="<%= image_path( @campaign_strip.image_or_default(1, :original)) %>" data-lightbox="album-1" title="<%= @campaign_strip.title_or_default(1) %>"><%= image_tag( @campaign_strip.image_or_default(1), :alt => "Hearno Logo") %></a></li>
+      <li><a href="<%= image_path( @campaign_strip.image_or_default(2, :original)) %>" data-lightbox="album-1" title="<%= @campaign_strip.title_or_default(2) %>"><%= image_tag( @campaign_strip.image_or_default(2), :alt => "Hearno Logo") %></a></li>
     </ul>
   </div>
   <h3 class="pb-title"><%= @campaign_strip.description %></h3>

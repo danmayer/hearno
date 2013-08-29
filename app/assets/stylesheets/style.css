@@ -168,7 +168,7 @@ ul.pb-strip li img {
 
 .lb-outerContainer {
 	overflow: visible !important;
-	background: #fff url(../images/paper.jpg) fixed repeat top left;
+	background: #fff url(image-url('paper.jpg')) fixed repeat top left;
 	border-radius: 0px;
 	max-width: 100%;
 	height: auto !important;
@@ -178,10 +178,11 @@ ul.pb-strip li img {
 	padding: 0;
 }
 
+/*
 #lightbox img.lb-image {
 	padding: 10px;
 	max-width: 100%;
-}
+}*/
 
 .lb-nav {
 	-webkit-box-sizing: content-box;
