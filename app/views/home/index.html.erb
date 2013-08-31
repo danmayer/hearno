@@ -1,3 +1,5 @@
 <h3>Home / About</h3>
 
-<%= render("campaign_strips/show") %>
+<% if @campaign_strip %>
+  <%= render("campaign_strips/show") %>
+<% end %>
