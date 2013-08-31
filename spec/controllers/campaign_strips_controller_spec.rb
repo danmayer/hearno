@@ -6,7 +6,7 @@ describe CampaignStripsController do
   # CampaignStrip. As you add validations to CampaignStrip, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    @user ||= login_user
+    @user ||= login_admin
     {"title" => "MyString",
       'description' => 'stuff and things',
       'creator_id' => @user.id,
@@ -17,7 +17,7 @@ describe CampaignStripsController do
   # in order to pass any filters (e.g. authentication) defined in
   # CampaignStripsController. Be sure to keep this updated too.
   def valid_session
-    @user ||= login_user
+    @user ||= login_admin
     {"warden.user.user.key" => session["warden.user.user.key"]}
   end
 

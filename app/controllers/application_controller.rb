@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   def verifiy_admin_or_owner!(object)
       admin_or_owner_error = "You must be an owner to perform this action"
       redirect_to(root_path, :alert => admin_or_owner_error) if current_user.nil?
-      if !current_user.is_admin? || current_user.id != object.creator.id
+      if !current_user.has_role?("admin") || current_user.id != object.creator.id
         redirect_to(root_path, :alert => admin_or_owner_error)
       end
   end

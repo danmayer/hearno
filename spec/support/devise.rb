@@ -3,7 +3,9 @@ RSpec.configure do |config|
 
   def login_admin
     @request.env["devise.mapping"] = Devise.mappings[:admin]
-    sign_in FactoryGirl.create(:admin) # Using factory girl as an example
+    user = User.where(:email =>'admin@example.com').first || FactoryGirl.create(:admin) # Using factory girl as an example
+    sign_in user
+    user
   end
   
   def login_user
