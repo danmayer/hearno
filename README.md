@@ -1,7 +1,11 @@
 Hearno
 ========================
 
-Hearno is an app for friends, to build something fun while learning a bit more about programming. Also, possibly to drive some donations to some of our favorite charities.
+Hearno allows users to express in small photos strips and text blurbs there thoughts on censorship.
+
+It is an app build to teach programming Ruby on Rails to friends. Opposed to just throw away projects while learning to code, we decided to build something fun while learning a bit more about programming. 
+
+Also, possibly to drive some donations to some of our favorite charities, related to freedom of speech.
 ________________________
 
 
@@ -88,6 +92,19 @@ ________________________
           url = git@heroku.com:hearno-YOURNAME-staging.git
           fetch = +refs/heads/*:refs/remotes/heroku/*
 
+### Upcoming lesson topics
+
+* Google Analytics
+* Adding 3rd party JS for sharing support (twitter, google+, Facebook)
+* Webcam support to take a new picture opposed to uploading one
+* Dog ears to go to previous and next photo strip something like these (http://www.usatoday.com/story/news/politics/2013/09/01/kerry-syria-sarin-evidence/2752837/)
+* User galleries to show all strips created by one user
+* Beter CSS / Design
+* SEO walk through on pages and urls scheme
+* Testing
+* Refactoring
+* Javascript updates
+* Building a embeddable widget
 
 ### TODOS
 
