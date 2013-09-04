@@ -11,8 +11,11 @@
   </div>
   <h3 class="pb-title"><%= @campaign_strip.description %></h3>
   <h5 class="pb-title"><%= @campaign_strip.creator.name %></h5>
+  <%= image_tag(avatar_image_url(@campaign_strip.creator), :alt => @campaign_strip.creator.name) %>
 </div>
 
-<%= link_to 'Edit', edit_campaign_strip_path(@campaign_strip) %> |
-<%= link_to 'Back', campaign_strips_path %>
-</section>
+<% if @campaign_strip.creator_id == current_user.id %>
+    <%= link_to 'Edit', edit_campaign_strip_path(@campaign_strip) %>
+<% end %>
+  
+  
