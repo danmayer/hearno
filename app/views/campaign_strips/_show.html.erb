@@ -10,7 +10,7 @@
     </ul>
   </div>
   <h3 class="pb-title"><%= @campaign_strip.description %></h3>
-  <h5 class="pb-title"><%= @campaign_strip.creator.name %></h5>
+  <h5 class="pb-title"><%= link_to @campaign_strip.creator.name, user_url(@campaign_strip.creator) %></h5>
   <%= image_tag(avatar_image_url(@campaign_strip.creator), :alt => @campaign_strip.creator.name) %>
 </div>
 
