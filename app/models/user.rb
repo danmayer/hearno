@@ -18,5 +18,6 @@ class User < ActiveRecord::Base
     square: '200x200#',
     medium: '300x300>'
   }
-
+  has_many :campaign_strips, :foreign_key => "creator_id"
+  
 end

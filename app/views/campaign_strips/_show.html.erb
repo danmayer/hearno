@@ -14,7 +14,7 @@
   <%= image_tag(avatar_image_url(@campaign_strip.creator), :alt => @campaign_strip.creator.name) %>
 </div>
 
-<% if @campaign_strip.creator_id == current_user.id %>
+<% if (current_user && @campaign_strip.creator_id == current_user.id) %>
     <%= link_to 'Edit', edit_campaign_strip_path(@campaign_strip) %>
 <% end %>
   
