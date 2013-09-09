@@ -38,6 +38,90 @@ a.brand {
     max-width: 220px; /* For the text below image */
 }
 
+#parallax {
+   padding:0px;
+   margin-left: -20px;
+   margin-right: -20px;
+   margin-top:-10px;
+   margin-bottom:-20px;
+ 
+   ul {
+     line-height: 14px;
+   }
+   ul li {
+     line-height: 16px;
+   }
+ 	  
+ 	.photo {
+ 		background-attachment: fixed;
+ 		background-position: 50% 0;
+ 		background-repeat: no-repeat;
+ 		height: 450px;
+ 		position: relative;
+ 	}
+ 	.photo div {
+		color: white;
+ 		display: block;
+ 		left: 50%;
+ 		margin-left: -640px;
+ 		padding: 10px;
+ 		position: absolute;
+ 		text-shadow: 0 2px 0 black, 0 0 10px black;
+ 		width: 1280px;
+  		padding-left: 50px;
+ 		padding-right: 50px;
+		padding-top:12px;
+
+          a {
+		color: white;
+ 	  }
+	  
+          h3 {
+                text-align: center;
+   	        margin:0px;
+ 		font-size: 38px;
+ 	  }
+	
+          .highlight {
+            background-color:rgba(0,0,0,0.6);
+ 	    border-radius: 6px 6px 6px 6px;
+	    margin-left: auto;
+	    margin-right: auto;
+	    position: static;
+	    width: 98%;
+	    padding: 6px;
+	    padding-top: 3px;
+	    padding-bottom: 3px;
+	  
+	    p {
+	      margin-top: 8px;
+	      margin-bottom: 8px;
+	    }
+
+    	    blockquote {
+	      margin-top: 5px;
+	      margin-bottom: 5px;
+	    }
+          }
+
+          small.attribution {
+            float:right;
+	  }
+
+        }
+
+ 	.photobooth {
+ 		background-image: image-url('photo_booth_images.jpg');
+		height: 540px;
+ 	}
+ 	.charities-donations {
+ 		background-image: image-url('charities_donations.jpg');
+ 	}
+ 	.code-editor {
+ 		background-image: image-url('code_editor.jpg');
+ 	}
+ }
+
 footer {
 background-color: #eee;
 padding-left: 20px;	

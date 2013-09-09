@@ -14,3 +14,22 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+$(function(){
+  if($('#parallax').length > 0) {
+    console.log('parallax');
+    $.stellar({
+      horizontalScrolling: false,
+      verticalOffset: 40
+    });
+  }
+});
+
+		// <script>
+		// $(function(){
+		// 	$.stellar({
+		// 		horizontalScrolling: false,
+		// 		verticalOffset: 40
+		// 	});
+		// });
+		// </script>
