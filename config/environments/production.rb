@@ -89,8 +89,8 @@ Hearno::Application.configure do
     :s3_protocol => 'https'
   }
 
-  config.force_ssl = true
-
+  # we aren't paying for ssl on our domain so we don't want to do this
+  #config.force_ssl = true
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
