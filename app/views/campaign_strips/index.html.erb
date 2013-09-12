@@ -20,9 +20,9 @@
     <td><%= campaign_strip.creator.name %></td>
     <td><%= campaign_strip.parent.try(:title) %></td>
     <td><%= campaign_strip.campaign.title %></td>
-    <td><button type="button" class="btn btn-primary"><%= link_to 'Show', campaign_strip %></button></td>
-    <td><button type="button" class="btn btn-success"><%= link_to 'Edit', edit_campaign_strip_path(campaign_strip) %></button></td>
-    <td><button type="button" class="btn btn-danger"><%= link_to 'Destroy', campaign_strip, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+    <td><%= link_to 'Show', campaign_strip, :class => "btn btn-primary" %></td>
+    <td><%= link_to 'Edit', edit_campaign_strip_path(campaign_strip), :class => "btn btn-success" %></td>
+    <td><%= link_to 'Destroy', campaign_strip, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
   </tr>
 <% end %>
 </table>
