@@ -36,6 +36,12 @@ class CampaignStrip < ActiveRecord::Base
     campaign_elements[title_position].try(:title)  || default_title
   end
   
+  def next
+    CampaignStrip.where("id > ?", id).first
+  end
   
+  def previous
+    CampaignStrip.where("id < ?", id).order("id desc").first
+  end
   
 end

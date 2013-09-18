@@ -17,5 +17,6 @@
 <% if (current_user && @campaign_strip.creator_id == current_user.id) %>
     <%= link_to 'Edit', edit_campaign_strip_path(@campaign_strip) %>
 <% end %>
-  
+  <%= (link_to 'Next', campaign_strip_path(@campaign_strip.next)) if @campaign_strip.next %>
+  <%= (link_to 'Previous', campaign_strip_path(@campaign_strip.previous)) if @campaign_strip.previous %>
   
