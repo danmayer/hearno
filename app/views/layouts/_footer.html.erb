@@ -1,4 +1,17 @@
-<div class="container">
-  Copyright 2013
-  <%= link_to 'about', about_path %>  
+<div class="navbar navbar-fixed-bottom">
+  <nav class="navbar-inner">
+    <div class="container">
+      <ul class="nav">
+        <li><span>Copyright 2013</span></li>
+        <li class="divider-vertical"></li>
+      </ul>
+      
+      <ul class="nav pull-right">
+        <% if current_user && current_user.has_role?(:admin) %>
+          <li><%= link_to 'Admin', users_path %></li>
+          <li><%= link_to 'Beta', '/beta' %></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
 </div>

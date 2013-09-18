@@ -18,6 +18,24 @@ a.brand {
   }
 }
 
+.header .container .nav {
+  a {
+    padding-top: 24px;
+    padding-bottom: 18px;
+    font-size: 18px;
+  }
+
+  .divider-vertical {
+    height: 70px;
+  }
+
+  li ul.dropdown-menu a {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 14px;
+  }
+}
+
 .content {
   background-color: #eee;
   padding: 20px;
@@ -123,18 +141,24 @@ a.brand {
  	}
  }
 
-footer {
-background-color: #eee;
-padding-left: 20px;	
-padding-top: 12px;
-       height: 50px;
-       left: 0;
-       position: absolute;
-       right: 0;
-      }
 
-footer .container {
-  width: 1170px;
-  margin-right: auto;
-  margin-left: auto;
+footer {
+  margin: 0 -20px;
+  background-color: #eee;	
+  padding-top: 12px;
+  height: 50px;
+
+  .navbar {
+    padding-top:12px;
+
+   .nav > li > span {
+     float: none;
+     padding: 10px 0px 10px;
+     margin-left: -40px;
+     color: #777777;
+     text-decoration: none;
+     text-shadow: 0 1px 0 white;
+     display:block;
+   }
+  }
 }
