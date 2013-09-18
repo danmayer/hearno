@@ -1,7 +1,7 @@
 <% if current_user %>
   <%= render("users/user_strips", {:user => current_user}) %>
 <% else %>
-  Not Logged In
+  <%= render "devise/sessions/new" %>
 <% end %>
 
 <% if @campaign_strip %>
