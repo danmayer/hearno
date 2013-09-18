@@ -1,4 +1,8 @@
-<h3>Home / About</h3>
+<% if current_user %>
+  <%= render("users/user_strips", {:user => current_user}) %>
+<% else %>
+  Not Logged In
+<% end %>
 
 <% if @campaign_strip %>
   <%= render("campaign_strips/show") %>

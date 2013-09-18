@@ -1,0 +1,5 @@
+<ul>
+  <% user.campaign_strips.each do |campaign_strip| %>
+  <li> <%= link_to campaign_strip.title, campaign_strip_url(campaign_strip) %>  </li>
+  <% end %>
+</ul>

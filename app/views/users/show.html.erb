@@ -2,8 +2,4 @@
 <p>User: <%= @user.name %></p>
 <%= image_tag(avatar_image_url(@user), :alt => @user.name)  %>
 <h5><%= @user.campaign_strips.length %> </h5>
-<ul>
-  <% @user.campaign_strips.each do |campaign_strip| %>
-  <li> <%= link_to campaign_strip.title, campaign_strip_url(campaign_strip) %>  </li>
-  <% end %>
-</ul>
+<%= render("users/user_strips", {:user => @users}) %>
