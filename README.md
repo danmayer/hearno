@@ -95,9 +95,12 @@ ________________________
 ### Upcoming lesson topics
 
 * Google Analytics
+* Dog ears to go to previous and next photo strip something like these (http://www.usatoday.com/story/news/politics/2013/09/01/kerry-syria-sarin-evidence/2752837/) (now we just need to style this)
 * Adding 3rd party JS for sharing support (twitter, google+, Facebook)
+* Building your own class (build a standard ruby class and mess around with it in IRB)
+* Modifying existing classes
+* From scratch AR models (build out creators to include contact info and sorting etc)
 * Webcam support to take a new picture opposed to uploading one
-* Dog ears to go to previous and next photo strip something like these (http://www.usatoday.com/story/news/politics/2013/09/01/kerry-syria-sarin-evidence/2752837/)
 * User galleries to show all strips created by one user
 * Beter CSS / Design
 * SEO walk through on pages and urls scheme
