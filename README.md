@@ -1,5 +1,7 @@
-Hearno
-========================
+#Hearno
+ :see_no_evil: :hear_no_evil: :speak_no_evil:
+_______________
+
 
 Hearno allows users to express in small photos strips and text blurbs there thoughts on censorship.
 
@@ -108,6 +110,7 @@ ________________________
 * Refactoring
 * Javascript updates
 * Building a embeddable widget
+* [HTML5 photo uploading with camera support](http://www.storminthecastle.com/2013/05/07/how-you-can-build-an-html5-photobooth-app/)
 
 ### TODOS
 
