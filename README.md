@@ -65,10 +65,20 @@ ________________________
 
 ### Basic git commands to push changes
 
+Git is the source code management system we use. It allows all of us to keep our source code in sync together. It also is how we push our source code to our servers to deploy our applications. See the basic command flow below.
+
 * `git status` #shows current progress
 * `git add .` #add all new files in project directory
 * `git commit -a -m "commit message"` #adds your work to be uploaded
 * `git push origin master` #uploads your work to remote code repository
+
+I recommend learning a bit more about git, here are some good tutorials:
+
+* [Atlassian git basics](https://www.atlassian.com/git/tutorial/git-basics)
+* [free code school class git real](https://www.codeschool.com/courses/git-real)
+* [git basics chapter from git-scm book](http://git-scm.com/book/en/Git-Basics)
+
+
 
 ### Sharing code changes with the group
 
