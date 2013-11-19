@@ -14,6 +14,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'redis'
+gem 'coverband', '>= 0.0.8'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'jquery-rails'
