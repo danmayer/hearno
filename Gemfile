@@ -15,7 +15,7 @@ group :assets do
 end
 
 gem 'redis'
-gem 'coverband', '>= 0.0.8'
+gem 'coverband', '>= 0.0.9'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'jquery-rails'
